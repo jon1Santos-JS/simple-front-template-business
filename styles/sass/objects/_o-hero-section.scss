@@ -1,0 +1,16 @@
+.o-hero-section{
+    display: flex;
+    height: 100vh;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: var(--primary-dark-color);
+        background: linear-gradient(90deg, var(--primary-dark-color) 15%, rgba(2, 2, 2, 0) 100%);
+    }
+}

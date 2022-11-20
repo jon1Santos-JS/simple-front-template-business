@@ -1,0 +1,9 @@
+.c-email-form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+    border-radius: 1rem;
+    background: var(--primary-dark-color);
+    background: linear-gradient(90deg, var(--primary-dark-color) 15%, var(--primary-light-color) 100%);
+}
