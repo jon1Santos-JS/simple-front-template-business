@@ -1,0 +1,29 @@
+.c-contact-container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--app-base-measure) * 3);
+    height: 100%;
+    width: 100%;
+
+    @media screen and (min-width: 1024px){
+        gap: calc(var(--app-base-measure) * 3);
+    }
+
+    & .c-title{
+        position: absolute;
+        top: 3%;
+        font-weight: 600;
+        font-size: calc(var(--app-base-font-size) * 1.7);
+        text-align: center;
+        margin: 0 var(--section-base-border-mobile);
+
+        @media screen and (min-width: 1024px){
+            left: 0;
+            margin-left: var(--section-base-border-desktop);
+
+        }
+    }
+}

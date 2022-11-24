@@ -5,8 +5,8 @@
     --primary-light-color: #1E5CB1;
     --primary-dark-color: #193B7F;
     --secondary-water-color: #4EC8C6;
-    --disable-font-color: rgb(78, 78, 78);
-    --disable-background-color: rgb(170, 170, 170);
+    --disable-font-color: rgb(122, 122, 122);
+    --disable-background-color: rgb(207, 207, 207);
 
     //MEASURES
 
@@ -14,6 +14,8 @@
     --app-base-font-size: clamp(0.5vw + var(--app-base-measure), var(--app-base-measure) * 1.6, 1.5vw + var(--app-base-measure));
     --navigation-measure-difference: calc(var(--app-base-measure) * 7);
     --app-width-responsive: clamp(5vw + var(--app-base-measure) * 20, var(--app-base-measure) * 50, 45vw);
+    --section-base-border-mobile: calc(var(--app-base-measure) * 5);
+    --section-base-border-desktop: calc(var(--app-base-measure) * 14);
 
     @media screen and (max-width: 768px){
         --navigation-measure-difference: calc(var(--app-base-measure) * 10);

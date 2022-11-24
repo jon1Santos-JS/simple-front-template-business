@@ -5,7 +5,7 @@ export default function HeroSectionContainer() {
         <section className="c-hero-section-container l-font-primary-white">
             <h1 className="c-container-tittle">Scont Contabilidade</h1>
             <div className="c-content">
-                <h3 className="c-list-title">Sua empresa</h3>
+                <h4 className="c-list-title">Sua empresa</h4>
                 <div className="c-list">
                     <CheckSentence sentence="aberta" />
                     <CheckSentence sentence="regularizada" />

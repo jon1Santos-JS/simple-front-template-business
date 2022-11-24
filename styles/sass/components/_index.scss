@@ -1,6 +1,8 @@
-@forward 'home-page/c-contact-form';
+@forward 'home-page/hero-section/c-main-hero-container';
+@forward 'home-page/contact-section/c-contact-form';
+@forward 'home-page/contact-section/c-contact-container';
+@forward 'home-page/footer-section/c-footer-container';
 @forward 'home-page/c-thanks-email-modal';
-@forward 'home-page/c-main-hero-container';
 @forward 'blog-page/c-blog-element';
 @forward 'navigation/c-navigation';
 @forward 'navigation/c-top-navigation';

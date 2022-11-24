@@ -1,4 +1,6 @@
 .c-thanks-close-modal{
+    display: flex;
+    justify-content: center;
     position: fixed;
     height: 100%;
     width: 100%;
@@ -12,7 +14,6 @@
     justify-content: space-around;
     align-items: flex-start;
     gap: calc(var(--app-base-measure) * 8);
-    margin-left: 10%;
     height: 80%;
     width: 80%;
     padding: calc(var(--app-base-measure) * 6);
@@ -22,7 +23,6 @@
     overflow: hidden;
 
     @media screen and (min-width: 1024px){
-        margin-left: 25%;
         width: calc(var(--app-width-responsive) * 2);
     }
 

@@ -46,7 +46,7 @@ export default function EmailForm({ openThanksModal }: EmailFormProps) {
             </div>
             <input
                 id="email"
-                className="c-form-element"
+                className="c-form-element l-bg-gray"
                 type="email"
                 name="email"
                 placeholder="Email"
@@ -62,7 +62,7 @@ export default function EmailForm({ openThanksModal }: EmailFormProps) {
             />
             <textarea
                 id="message"
-                className="c-form-element"
+                className="c-form-element l-bg-gray"
                 name="message"
                 placeholder="Mensagem"
                 value={textValue}
@@ -77,7 +77,7 @@ export default function EmailForm({ openThanksModal }: EmailFormProps) {
             />
             <button
                 className={`c-form-element l-button ${
-                    disableForm ? 'l-button-disable' : ' l-primary-button'
+                    disableForm ? 'l-bg-gray' : ' l-primary-button'
                 }`}
                 type="submit"
                 disabled={state.submitting}

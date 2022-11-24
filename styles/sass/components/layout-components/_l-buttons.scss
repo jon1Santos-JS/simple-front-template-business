@@ -41,8 +41,11 @@
     }
 }
 
-.l-button-disable{
-    background-color: var(--disable-background-color);
-    color: var(--disable-font-color);
-    cursor: initial;
+.l-primary-navigation-white-button{
+    color: var(--primary-white-color);
+    transition: color 0.2s ease;
+
+    &:hover{
+        color: var(--scondary-water-color);
+    }
 }

@@ -23,14 +23,14 @@ export default function WhatsappForm() {
             </div>
             <input
                 id="name"
-                className="c-form-element"
+                className="c-form-element l-bg-gray"
                 type="text"
                 name="name"
                 placeholder="Nome"
             />
             <textarea
                 id="message"
-                className="c-form-element"
+                className="c-form-element l-bg-gray"
                 name="message"
                 placeholder="Mensagem"
                 ref={textMessage && null}
