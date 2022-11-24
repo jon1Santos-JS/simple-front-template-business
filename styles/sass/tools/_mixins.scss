@@ -1,0 +1,10 @@
+@mixin image-gradient-mixin ($degrees) {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--primary-dark-color);
+    background: linear-gradient($degrees, var(--primary-dark-color) 15%, rgba(2, 2, 2, 0) 100%);
+}

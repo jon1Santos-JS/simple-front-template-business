@@ -1,0 +1,12 @@
+@use '../../../tools/mixins';
+
+.o-hero-section{
+    display: flex;
+    height: 90vh;
+    position: relative;
+    margin-top: var(--navigation-measure-difference);
+
+    &::after{
+        @include mixins.image-gradient-mixin(90deg);
+    }
+}

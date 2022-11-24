@@ -1,7 +1,7 @@
-@forward 'o-home-page';
-@forward 'o-hero-section';
-@forward 'o-contact-section';
-@forward 'o-footer-section';
-@forward 'o-main-navigation-bar';
-@forward 'o-blog-content';
-@forward 'o-blog-page';
+@forward 'home-page/o-home-page';
+@forward 'home-page/hero-section/o-hero-section';
+@forward 'home-page/footer-section/o-footer-section';
+@forward 'home-page/contact-section/o-contact-section';
+@forward 'blog-page/o-blog-page';
+@forward 'blog-page/o-blog-container';
+@forward 'page-404/o-404-page';

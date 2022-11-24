@@ -1,0 +1,14 @@
+.o-contact-section{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--app-base-measure) * 3);
+    height: 120vh;
+    background-color: var(--primary-white-color);
+
+    @media screen and (min-width: 1024px){
+        gap: calc(var(--app-base-measure) * 3);
+    }
+}

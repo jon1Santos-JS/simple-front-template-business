@@ -1,0 +1,16 @@
+.l-font-primary{
+    background: -webkit-linear-gradient(var(--primary-dark-color), var(--primary-light-color));
+    background-clip: text;
+    font-weight: 500;
+    -webkit-text-fill-color: transparent;
+}
+
+.l-font-primary-white{
+    color: var(--primary-white-color);
+    font-weight: 500;
+}
+
+.l-font-secondary-water{
+    color: var(--secondary-water-color);
+    font-weight: 500;
+}

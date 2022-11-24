@@ -1,0 +1,48 @@
+.l-button{
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.l-primary-button{
+    background-color: var(--primary-light-color);
+    color: var(--primary-white-color);
+    font-weight: 500;
+    transition: background 0.2s ease;
+
+    &:hover{
+        background-color: var(--secondary-water-color);
+        color: var(--primary-dark-color);
+    }
+}
+
+.l-secondary-button{
+    background-color: var(--primary-white-color);
+    color: var(--primary-dark-color);
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+
+    &:hover{
+        background-color: var(--secondary-water-color);
+    }
+}
+
+.l-primary-navigation-button{
+    background: -webkit-linear-gradient(var(--primary-dark-color), var(--primary-light-color));
+    background-clip: text;
+    font-weight: 500;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.2s ease;
+
+    &:hover{
+        color: var(--secondary-water-color);
+        background: none;
+        -webkit-text-fill-color: initial;
+        background-clip: initial;
+    }
+}
+
+.l-button-disable{
+    background-color: var(--disable-background-color);
+    color: var(--disable-font-color);
+    cursor: initial;
+}

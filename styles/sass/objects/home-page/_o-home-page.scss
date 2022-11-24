@@ -1,8 +1,6 @@
-.o-contact-section{
+.o-homepage{
     display: flex;
+    position: relative;
     flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    height: 100vh;
     background-color: var(--primary-white-color);
 }

@@ -1,0 +1,23 @@
+textarea{
+    width: var(--form-textarea-width);
+    height: var(--form-textarea-height);
+    min-width: var(--form-textarea-width);
+    max-width: var(--form-textarea-width);
+    min-height: var(--form-textarea-height);
+    max-height: var(--form-textarea-height);
+    border-radius: 0;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+     border-radius: 0;
+}
+
+

@@ -1,19 +1,46 @@
-// https://wa.me/91336290?text=oi
+import { createRef } from 'react';
+import WhatsappIcon from '../public/images/whatsapp-icon-svg.svg';
+import Image from 'next/image';
 
 export default function WhatsappForm() {
+    const textMessage = createRef();
+
     return (
         <form
             onSubmit={(e) => {
                 e.preventDefault();
-                window.open('https://wa.me/91336290?text=oi');
             }}
-            className="c-whatsapp-form"
+            className="c-form c-contact-form c-whatsapp-form l-bg-primary"
         >
-            <label htmlFor="number">Número</label>
-            <input id="number" type="text" name="number" />
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" />
-            <button type="submit">Submit</button>
+            <div className="c-contact-label l-font-primary-white">
+                <Image
+                    src={WhatsappIcon}
+                    width={42}
+                    height={42}
+                    alt="scont logo"
+                />
+                <span className="c-label-text">Whatsapp</span>
+            </div>
+            <input
+                id="name"
+                className="c-form-element"
+                type="text"
+                name="name"
+                placeholder="Nome"
+            />
+            <textarea
+                id="message"
+                className="c-form-element"
+                name="message"
+                placeholder="Mensagem"
+                ref={textMessage && null}
+            />
+            <button
+                className="c-form-element l-button l-secondary-button"
+                type="submit"
+            >
+                Enviar
+            </button>
         </form>
     );
 }

@@ -1,11 +1,18 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import NavigationBar from '../components/NavigationBar';
 import Image from 'next/image';
+import { useState } from 'react';
 import EmailForm from '../components/EmailForm';
+import HeroSectionContainer from '../components/HeroSectionContainer/HeroSectionContainer';
+import ThanksEmailModal from '../components/ThanksEmailModal';
 import WhatsappForm from '../components/WhatsappForm';
 
 const Home: NextPage = () => {
+    const [displayModal, setDisplayModal] = useState<boolean>(true);
+    function onModalOpen() {
+        setDisplayModal(false);
+    }
+
     return (
         <div>
             <Head>
@@ -16,26 +23,28 @@ const Home: NextPage = () => {
                 />
                 <link rel="icon" href="/favicon-scont.ico" />
             </Head>
-            <NavigationBar />
             <section className="o-home-page">
+                <ThanksEmailModal
+                    onClose={() => setDisplayModal(true)}
+                    isOpen={displayModal}
+                />
                 <section className="o-hero-section">
-                    <h1 className="c-hero-section-tittle">
-                        Scont Contabilidade
-                    </h1>
+                    <HeroSectionContainer />
                     <Image
                         src="/images/desktop-hero-image-raw-svg.svg"
                         style={{
                             objectFit: 'cover',
                         }}
                         fill={true}
+                        priority={true}
                         alt={'Scont contabilidade hero image'}
                     />
                 </section>
-                <section className="o-contact-section">
-                    <EmailForm />
+                <section id="contact" className="o-contact-section">
                     <WhatsappForm />
+                    <EmailForm openThanksModal={onModalOpen} />
                 </section>
-                <footer className="o-footer-section"></footer>
+                <footer className="o-footer-section l-bg-primary"></footer>
             </section>
         </div>
     );

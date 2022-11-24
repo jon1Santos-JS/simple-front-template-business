@@ -1,0 +1,7 @@
+@use '../../tools/mixins';
+
+.c-blog-element{
+    &::after{
+        @include mixins.image-gradient-mixin(0deg);
+    }
+}

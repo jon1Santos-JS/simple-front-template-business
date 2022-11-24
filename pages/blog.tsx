@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import NavigationBar from '../components/NavigationBar';
+import Image from 'next/image';
 
 const Blog: NextPage = () => {
     return (
@@ -13,9 +13,20 @@ const Blog: NextPage = () => {
                 />
                 <link rel="icon" href="/favicon-scont.ico" />
             </Head>
-            <NavigationBar />
             <section className="o-blog-page">
-                <section className="o-blog-content"></section>
+                <section className="o-blog-container">
+                    <section className="c-blog-element">
+                        <Image
+                            src="/images/imposto-de-renda-background-image-svg.svg"
+                            style={{
+                                objectFit: 'cover',
+                            }}
+                            fill={true}
+                            priority={true}
+                            alt={'Imposto de renda imagem'}
+                        />
+                    </section>
+                </section>
                 <footer className="o-footer-section"></footer>
             </section>
         </div>

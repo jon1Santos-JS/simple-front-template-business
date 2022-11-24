@@ -1,0 +1,15 @@
+.o-blog-container{
+    display: flex;
+    height: 100vh;
+    margin-top: var(--navigation-measure-difference);
+    padding: calc(var(--app-base-measure) * 5);
+    background-color: var(--primary-white-color);
+
+    & .c-blog-element{
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        width: calc(var(--app-base-measure) * 58);
+        height: calc(var(--app-base-measure) * 40);
+    }
+}

@@ -5,12 +5,29 @@
     --primary-light-color: #1E5CB1;
     --primary-dark-color: #193B7F;
     --secondary-water-color: #4EC8C6;
+    --disable-font-color: rgb(78, 78, 78);
+    --disable-background-color: rgb(170, 170, 170);
 
     //MEASURES
 
     --app-base-measure: 8px;
+    --app-base-font-size: clamp(0.5vw + var(--app-base-measure), var(--app-base-measure) * 1.6, 1.5vw + var(--app-base-measure));
+    --navigation-measure-difference: calc(var(--app-base-measure) * 7);
+    --app-width-responsive: clamp(5vw + var(--app-base-measure) * 20, var(--app-base-measure) * 50, 45vw);
+
+    @media screen and (max-width: 768px){
+        --navigation-measure-difference: calc(var(--app-base-measure) * 10);
+    }
 
     //SHADOW-EFFECT
 
-    --base-box-shadow: 0px 5px 10px 0px black;
+    --small-box-shadow: 0px 1px 10px 0px black;
+    --medium-box-shadow: 0px 5px 10px 0px black;
+
+    //Z-INDEX DEEPER VALUES
+
+    --modal-index: 999;
+    --navigation-index: 800;
+    --component-index: 2;
+    --background-index: -5;
 }

@@ -1,0 +1,13 @@
+.c-bottom-navigation{
+    display: none;
+    bottom: 0;
+    height: calc(var(--app-base-measure) * 10);
+
+    @media screen and (max-width: 768px){
+        display: initial;
+
+        & .c-navigation-logo{
+            display: none;
+        }
+    }
+}
