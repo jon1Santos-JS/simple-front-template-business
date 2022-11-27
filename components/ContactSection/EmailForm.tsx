@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { FormEvent, useEffect, useState } from 'react';
-import EmailIcon from '../public/images/email-icon-svg.svg';
+import EmailIcon from '../../public/images/email-icon-svg.svg';
 import Image from 'next/image';
 
 interface EmailFormProps {
@@ -51,6 +51,7 @@ export default function EmailForm({ openThanksModal }: EmailFormProps) {
                 name="email"
                 placeholder="Email"
                 value={emailValue}
+                maxLength={40}
                 onChange={(e) => setEmailvalue(e.target.value)}
                 onFocus={() => setFocus(true)}
                 onBlur={() => setFocus(false)}
@@ -66,6 +67,7 @@ export default function EmailForm({ openThanksModal }: EmailFormProps) {
                 name="message"
                 placeholder="Mensagem"
                 value={textValue}
+                maxLength={255}
                 onChange={(e) => setTextValue(e.target.value)}
                 onFocus={() => setFocus(true)}
                 onBlur={() => setFocus(false)}

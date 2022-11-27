@@ -5,6 +5,7 @@
     --primary-light-color: #1E5CB1;
     --primary-dark-color: #193B7F;
     --secondary-water-color: #4EC8C6;
+    --secondary-water-light-color: #cffcfb;
     --disable-font-color: rgb(122, 122, 122);
     --disable-background-color: rgb(207, 207, 207);
 
@@ -13,7 +14,7 @@
     --app-base-measure: 8px;
     --app-base-font-size: clamp(0.5vw + var(--app-base-measure), var(--app-base-measure) * 1.6, 1.5vw + var(--app-base-measure));
     --navigation-measure-difference: calc(var(--app-base-measure) * 7);
-    --app-width-responsive: clamp(5vw + var(--app-base-measure) * 20, var(--app-base-measure) * 50, 45vw);
+    --app-width-responsive: clamp(5vw + var(--app-base-measure) * 20, var(--app-base-measure) * 70, 45vw);
     --section-base-border-mobile: calc(var(--app-base-measure) * 5);
     --section-base-border-desktop: calc(var(--app-base-measure) * 14);
 
@@ -23,7 +24,7 @@
 
     //SHADOW-EFFECT
 
-    --small-box-shadow: 0px 1px 10px 0px black;
+    --small-box-shadow: 0px 5px 10px -5px black;
     --medium-box-shadow: 0px 5px 10px 0px black;
 
     //Z-INDEX DEEPER VALUES

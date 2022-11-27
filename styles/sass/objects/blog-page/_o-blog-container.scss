@@ -9,7 +9,12 @@
         position: relative;
         overflow: hidden;
         border-radius: 1rem;
-        width: calc(var(--app-base-measure) * 58);
-        height: calc(var(--app-base-measure) * 40);
+        width: calc(var(--app-width-responsive) * 1.5);
+        height: calc(var(--app-width-responsive));
+
+        @media screen and (min-width: 1024px){
+            height: calc(var(--app-width-responsive) / 1.2);
+            width: calc(var(--app-width-responsive) * 1.2);
+        }
     }
 }

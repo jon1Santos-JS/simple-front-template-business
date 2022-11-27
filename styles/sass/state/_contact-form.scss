@@ -1,3 +1,7 @@
 .has-focus{
     z-index: var(--component-index) !important;
 }
+
+.has-empty-value{
+    outline: 3px red solid !important;
+}

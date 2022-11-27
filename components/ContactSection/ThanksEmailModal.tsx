@@ -17,14 +17,12 @@ export default function ThanksEmailModal({
             }}
         >
             <aside
-                className="c-thanks-email-modal l-bg-primary-light"
+                className="c-thanks-email-modal l-bg-primary-light l-font-primary-white"
                 onClick={(e) => e.stopPropagation()}
             >
                 <section className="c-thanks-text">
-                    <h3 className="c-thanks-title l-font-primary-white">
-                        Recebemos sua mensagem.
-                    </h3>
-                    <p className="c-thanks-paragraph l-font-secondary-water">
+                    <h3 className="c-thanks-title">Recebemos sua mensagem.</h3>
+                    <p className="c-thanks-paragraph">
                         A Scont agradece pelo seu interesse, é só aguardar que,
                         em breve, entraremos em contato com você.
                     </p>

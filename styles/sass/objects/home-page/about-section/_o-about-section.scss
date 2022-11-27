@@ -1,0 +1,7 @@
+.o-about-section{
+    height: 110vh;
+
+    @media screen and (max-width: 1024px) and (max-height: 530px){
+        height: 150vh;
+    }
+}

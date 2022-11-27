@@ -1,7 +1,48 @@
 @use '../../tools/mixins';
 
 .c-blog-element{
-    &::after{
-        @include mixins.image-gradient-mixin(0deg);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+
+    & .c-image{
+        transition: transform ease 0.3s;
+        border-radius: 1rem;
+    }
+
+    & .c-text{
+        padding: calc(var(--app-base-measure) * 4.5) 0;
+        transition: opacity ease 0.3s, z-index ease 0.3s, transform ease 0.3s;
+        user-select: none;
+        z-index: 1;
+        margin-left: calc(var(--app-base-measure) * 3);
+        font-size: calc(var(--app-base-font-size) * 1.5);
+
+        @media screen and (min-width: 1024px){
+            margin-left: calc(var(--app-base-measure) * 4);
+        }
+    }
+
+    & .c-bg-gradient{
+        --gradient-graduation: 1%;
+        @include mixins.image-gradient-mixin(0deg, var(--gradient-graduation));
+        transition: --gradient-graduation ease 0.3s;
+        z-index: 1;
+        border-radius: 1rem;
+    }
+
+    &:hover .c-text{
+        opacity: 1;
+        z-index: 2;
+        transform: translateY(-7%);
+    }
+
+    &:hover .c-bg-gradient{
+        --gradient-graduation: 2%;
+    }
+
+    &:hover .c-image{
+        transform: scale(99%);
     }
 }

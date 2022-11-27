@@ -1,33 +1,30 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import { useEffect } from 'react';
+import BlogElement from '../components/BlogPage/BlogElement';
+
+import FooterSection from '../components/FooterSection/FooterSection';
 
 const Blog: NextPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 1);
+    }, []);
+
     return (
         <div>
             <Head>
-                <title>Scont Contabilidade</title>
+                <title>Scont Blog</title>
                 <meta
                     name="Scont Contabilidade Blog Page"
                     content="Entender um pouco mais sobre processos relacionados a contabilidade e administração de empresas"
                 />
                 <link rel="icon" href="/favicon-scont.ico" />
             </Head>
-            <section className="o-blog-page">
+            <section className="o-blog-page l-bg-primary-white">
                 <section className="o-blog-container">
-                    <section className="c-blog-element">
-                        <Image
-                            src="/images/imposto-de-renda-background-image-svg.svg"
-                            style={{
-                                objectFit: 'cover',
-                            }}
-                            fill={true}
-                            priority={true}
-                            alt={'Imposto de renda imagem'}
-                        />
-                    </section>
+                    <BlogElement />
                 </section>
-                <footer className="o-footer-section"></footer>
+                <FooterSection />
             </section>
         </div>
     );

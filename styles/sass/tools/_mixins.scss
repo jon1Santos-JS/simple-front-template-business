@@ -1,10 +1,17 @@
-@mixin image-gradient-mixin ($degrees) {
+@mixin image-gradient-mixin ($degrees, $graduation: 15%) {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
     width: 100%;
-    background: var(--primary-dark-color);
-    background: linear-gradient($degrees, var(--primary-dark-color) 15%, rgba(2, 2, 2, 0) 100%);
+    background: linear-gradient($degrees, rgba(25,59,127,0.9247899843531162) 0%, rgba(25,59,127,0.7707283597032564) 52%, rgba(0,212,255,0) 100%);
+
+    @media screen and (min-width: 1024px) {
+        background: linear-gradient($degrees, var(--primary-dark-color) $graduation, rgba(2, 2, 2, 0) 100%);
+        animation: gradient-transition 1s ease;
+
+    }
 }
+
+

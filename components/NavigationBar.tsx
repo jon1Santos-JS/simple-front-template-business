@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import ScontLogo from '../public/images/logo-svg.svg';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 interface NavigationProps {
     navigationClassName: string;
@@ -9,6 +10,18 @@ interface NavigationProps {
 export default function NavigationBar({
     navigationClassName,
 }: NavigationProps) {
+    const [isUserOnMainPage, setisUserOnMainPage] = useState('');
+
+    useEffect(() => {
+        setisUserOnMainPage(window.location.pathname);
+        if (isUserOnMainPage !== '/')
+            setisUserOnMainPage(window.location.origin);
+    }, [isUserOnMainPage]);
+
+    function checkUsersPage(path: string) {
+        return isUserOnMainPage === '/' ? path : isUserOnMainPage + '/' + path;
+    }
+
     return (
         <div className={navigationClassName}>
             <Link href="/">
@@ -21,9 +34,18 @@ export default function NavigationBar({
                 />
             </Link>
             <div className="c-navigation-routes">
-                <a className="l-primary-navigation-button" href="#contact">
+                <Link
+                    className="l-primary-navigation-button"
+                    href={checkUsersPage('#contact')}
+                >
                     Contato
-                </a>
+                </Link>
+                <Link
+                    className="l-primary-navigation-button"
+                    href={checkUsersPage('#about')}
+                >
+                    About
+                </Link>
                 <Link className="l-primary-navigation-button" href="/blog">
                     Blog
                 </Link>

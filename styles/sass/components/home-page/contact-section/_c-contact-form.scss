@@ -1,10 +1,26 @@
-//FORM 'TEXTAREA BASIS'
-//--form-textarea-height: calc(var(--app-base-measure) * 20);
-//--form-textarea-width: calc(var(--app-base-measure) * 30);
-
 .c-contact-form{
     border-radius: 1rem;
     box-shadow: var(--medium-box-shadow);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: calc(var(--app-base-measure) * 3);
+    padding: calc(var(--app-base-measure) * 3);
+
+    & .c-form-element{
+        --form-textarea-width: var(--app-width-responsive);
+        --form-textarea-height: calc(var(--app-width-responsive) / 2);
+        width: var(--app-width-responsive);
+        height: calc(var(--app-width-responsive) / 7);
+        padding: calc(var(--app-base-measure) * 2);
+
+        @media screen and (min-width: 1024px){
+            --form-textarea-width: calc(var(--app-width-responsive) / 1.1);
+            --form-textarea-height: calc(var(--app-width-responsive) / 5);
+            width: calc(var(--app-width-responsive) / 1.1);
+            height: calc(var(--app-width-responsive) / 5);
+        }
+    }
 
     & .c-contact-label{
         display: flex;
@@ -26,6 +42,17 @@
             z-index: 1;
             left: 50%;
             bottom: 30%;
+        }
+
+        &.c-whatsapp-form, &.c-email-form {
+            position: absolute;
+            gap: calc(var(--app-base-measure) * 4);
+            padding: calc(var(--app-base-measure) * 4);
+
+            & .c-form-element{
+                height: 100%;
+                --form-textarea-height: calc(var(--app-width-responsive) / 2);
+            }
         }
     }
 }
