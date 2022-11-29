@@ -15,7 +15,7 @@ export default function CheckSentence({ sentence }: CheckSentenceProps) {
                 width={50}
                 height={50}
             />
-            <span className="l-font-secondary-water">{sentence}</span>
+            <span className="l-font-primary-white">{sentence}</span>
         </div>
     );
 }
