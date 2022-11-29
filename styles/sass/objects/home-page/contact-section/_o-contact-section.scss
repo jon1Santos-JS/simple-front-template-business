@@ -5,6 +5,10 @@
     align-items: center;
     height: 130vh;
 
+    @media screen and (min-height: 800px){
+        height: 90vh;
+    }
+
     @media screen and (max-width: 1024px) and (max-height: 530px){
         height: 250vh;
     }
