@@ -13,9 +13,10 @@
     position: relative;
     justify-content: space-around;
     align-items: flex-start;
-    gap: calc(var(--app-base-measure) * 8);
-    height: 80%;
-    width: 80%;
+    gap: calc(var(--app-base-measure) * 3);
+    margin-top: 5%;
+    height: 70%;
+    width: 70%;
     padding: calc(var(--app-base-measure) * 6);
     box-shadow: var(--small-box-shadow);
     border-radius: 1rem;
@@ -30,7 +31,7 @@
             margin-top: -2%;
             display: flex;
             flex-direction: column;
-            gap: calc(var(--app-base-measure) * 10);
+            gap: calc(var(--app-base-measure) * 5);
 
             @media screen and (min-width: 1024px){
                 gap: calc(var(--app-base-measure) * 10);
@@ -39,17 +40,18 @@
         }
 
         & .c-thanks-title{
-            font-size: calc(var(--app-base-font-size) * 2.5);
+            font-size: calc(var(--app-base-font-size) * 2.2);
         }
 
         & .c-thanks-paragraph{
-            width: 70%;
+            width: 80%;
             font-size: calc(var(--app-base-font-size) * 1.4);
             text-align: justify;
             line-height: calc(var(--app-base-measure) * 3.5);
 
             @media screen and (min-width: 1024px){
-                width: 70%;
+                line-height: calc(var(--app-base-measure) * 4.8);
+                width: 60%;
             }
         }
 

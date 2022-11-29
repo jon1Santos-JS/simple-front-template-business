@@ -1,15 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import { useEffect } from 'react';
 import BlogElement from '../components/BlogPage/BlogElement';
 
 import FooterSection from '../components/FooterSection/FooterSection';
 
 const Blog: NextPage = () => {
-    useEffect(() => {
-        window.scrollTo(0, 1);
-    }, []);
-
     return (
         <div>
             <Head>

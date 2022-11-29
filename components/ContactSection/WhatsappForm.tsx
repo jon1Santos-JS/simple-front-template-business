@@ -1,21 +1,21 @@
 import { FormEvent, useState } from 'react';
 import WhatsappIcon from '../../public/images/whatsapp-icon-svg.svg';
 import Image from 'next/image';
+import useInputCheck from '../../hooks/useInputCheck';
 
 export default function WhatsappForm() {
     const [textMessage, setTextMessage] = useState('');
     const [userName, setUserName] = useState('');
-    const [isFirstCheck, setisFirstCheck] = useState(false);
-
-    const onFirstCheck = (value: string) => {
-        if (isFirstCheck) return value;
-    };
+    const { changeInputState, onCheckInputLength, setFirstCheck } =
+        useInputCheck();
 
     const onSubmitFunction = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setisFirstCheck(true);
 
         if (userName && textMessage) {
+            setTextMessage('');
+            setUserName('');
+            window.location.reload();
             window.open(
                 `https://wa.me/91197215?text=[${userName}]%20${textMessage}`,
                 '_blank',
@@ -39,21 +39,27 @@ export default function WhatsappForm() {
             </div>
             <input
                 id="name"
-                className={`c-form-element l-bg-gray ${onFirstCheck(
-                    userName ? '' : 'has-empty-value',
+                className={`c-form-element l-bg-gray ${changeInputState(
+                    userName,
                 )}`}
                 type="text"
                 name="name"
-                onChange={(e) => setUserName(e.target.value)}
+                value={userName}
+                onChange={(e) =>
+                    onCheckInputLength(e.target.value, 40, setUserName)
+                }
                 placeholder="Nome"
                 maxLength={40}
             />
             <textarea
                 id="message"
-                className={`c-form-element l-bg-gray ${onFirstCheck(
-                    textMessage ? '' : 'has-empty-value',
+                className={`c-form-element l-bg-gray ${changeInputState(
+                    textMessage,
                 )}`}
-                onChange={(e) => setTextMessage(e.target.value)}
+                value={textMessage}
+                onChange={(e) =>
+                    onCheckInputLength(e.target.value, 255, setTextMessage)
+                }
                 name="message"
                 placeholder="Mensagem"
                 maxLength={255}
@@ -61,6 +67,7 @@ export default function WhatsappForm() {
             <button
                 className="c-form-element l-button l-secondary-button"
                 type="submit"
+                onClick={() => setFirstCheck(false)}
             >
                 Enviar
             </button>

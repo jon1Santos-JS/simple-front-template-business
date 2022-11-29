@@ -15,6 +15,9 @@ export default function BlogElement() {
                     objectFit: 'cover',
                 }}
                 fill={true}
+                sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                33vw"
                 priority={true}
                 alt={'imagem de fundo do botão de "como abrir uma empresa?"'}
             />

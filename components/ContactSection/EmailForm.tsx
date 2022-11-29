@@ -2,6 +2,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { FormEvent, useEffect, useState } from 'react';
 import EmailIcon from '../../public/images/email-icon-svg.svg';
 import Image from 'next/image';
+import useInputCheck from '../../hooks/useInputCheck';
 
 interface EmailFormProps {
     openThanksModal: () => void;
@@ -10,27 +11,36 @@ interface EmailFormProps {
 export default function EmailForm({ openThanksModal }: EmailFormProps) {
     const [state, handleSubmit] = useForm('mnqrynyo');
     const [focus, setFocus] = useState(false);
-    const [disableForm, setDisableForm] = useState(false);
+    const [turnOffState, setTurnOffState] = useState('');
     const [emailValue, setEmailvalue] = useState('');
     const [textValue, setTextValue] = useState('');
+    const { changeInputState, onCheckInputLength, setFirstCheck } =
+        useInputCheck();
 
     useEffect(() => {
-        if (state.succeeded) {
-            setEmailvalue('');
-            setTextValue('');
-            setDisableForm(true);
-            setTimeout(() => openThanksModal(), 700);
-        }
+        onInputState();
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.succeeded]);
 
-    function disableSubmit(e: FormEvent<HTMLFormElement>) {
-        e.preventDefault();
+    function onInputState() {
+        if (state.succeeded) {
+            setEmailvalue('');
+            setTextValue('');
+            setTurnOffState('off');
+            setTimeout(() => openThanksModal(), 500);
+        }
+    }
+
+    function onCheckSubmit() {
+        if (emailValue === '' || textValue === '') {
+            return (e: FormEvent<HTMLFormElement>) => e.preventDefault();
+        }
+        return handleSubmit;
     }
 
     return (
         <form
-            onSubmit={disableForm ? disableSubmit : handleSubmit}
+            onSubmit={onCheckSubmit()}
             className={`c-form c-contact-form c-email-form l-bg-primary-white ${
                 focus ? 'has-focus' : ''
             }`}
@@ -46,13 +56,17 @@ export default function EmailForm({ openThanksModal }: EmailFormProps) {
             </div>
             <input
                 id="email"
-                className="c-form-element l-bg-gray"
+                className={`c-form-element l-bg-gray ${changeInputState(
+                    turnOffState ? turnOffState : emailValue,
+                )}`}
                 type="email"
                 name="email"
                 placeholder="Email"
                 value={emailValue}
                 maxLength={40}
-                onChange={(e) => setEmailvalue(e.target.value)}
+                onChange={(e) =>
+                    onCheckInputLength(e.target.value, 40, setEmailvalue)
+                }
                 onFocus={() => setFocus(true)}
                 onBlur={() => setFocus(false)}
             />
@@ -63,12 +77,16 @@ export default function EmailForm({ openThanksModal }: EmailFormProps) {
             />
             <textarea
                 id="message"
-                className="c-form-element l-bg-gray"
+                className={`c-form-element l-bg-gray ${changeInputState(
+                    turnOffState ? turnOffState : textValue,
+                )}`}
                 name="message"
                 placeholder="Mensagem"
                 value={textValue}
                 maxLength={255}
-                onChange={(e) => setTextValue(e.target.value)}
+                onChange={(e) =>
+                    onCheckInputLength(e.target.value, 255, setTextValue)
+                }
                 onFocus={() => setFocus(true)}
                 onBlur={() => setFocus(false)}
             />
@@ -79,12 +97,13 @@ export default function EmailForm({ openThanksModal }: EmailFormProps) {
             />
             <button
                 className={`c-form-element l-button ${
-                    disableForm ? 'l-bg-gray' : ' l-primary-button'
+                    turnOffState ? 'l-bg-gray' : ' l-primary-button'
                 }`}
                 type="submit"
                 disabled={state.submitting}
                 onFocus={() => setFocus(true)}
                 onBlur={() => setFocus(false)}
+                onClick={() => setFirstCheck(false)}
             >
                 Enviar
             </button>

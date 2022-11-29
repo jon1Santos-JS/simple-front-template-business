@@ -8,6 +8,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: var(--component-index);
 
         & .o-404{
             font-size: calc(var(--app-base-font-size) * 4);
