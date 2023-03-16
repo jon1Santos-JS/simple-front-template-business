@@ -3,7 +3,13 @@ import WhatsappIcon from '../../../public/images/whatsapp-icon-svg.svg';
 import Image from 'next/image';
 import useInputCheck from '../../hooks/useInputCheck';
 
-export default function WhatsappForm() {
+export type whatsappPhone = string;
+
+interface whatsappFormProps {
+    number: whatsappPhone;
+}
+
+export default function WhatsappForm(props: whatsappFormProps) {
     const [textMessage, setTextMessage] = useState('');
     const [userName, setUserName] = useState('');
     const { changeInputState, onCheckInputLength, setFirstCheck } =
@@ -15,11 +21,11 @@ export default function WhatsappForm() {
         if (userName && textMessage) {
             setTextMessage('');
             setUserName('');
-            window.location.reload();
             window.open(
-                `https://wa.me/91197215?text=[${userName}]%20${textMessage}`,
-                '_blank',
+                `https://wa.me/${props.number}?text=[${userName}]%20${textMessage}`,
+                'blank',
             );
+            window.location.reload();
         }
     };
 

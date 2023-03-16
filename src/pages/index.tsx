@@ -7,7 +7,21 @@ import HeroSection from '../components/HeroSection/HeroSection';
 import ThanksEmailModal from '../components/ContactSection/ThanksEmailModal';
 import AboutSection from '../components/AboutSection/AboutSection';
 
-const Home: NextPage = () => {
+interface HomeProps {
+    number: string;
+    formspreeKey: string;
+}
+
+export function getStaticProps() {
+    return {
+        props: {
+            number: process.env.PHONE_NUMBER,
+            formspreeKey: process.env.FORMSPREE_KEY,
+        },
+    };
+}
+
+const Home: NextPage<HomeProps> = ({ number, formspreeKey }) => {
     const [displayModal, setDisplayModal] = useState<boolean>(true);
     function onModalOpen() {
         setDisplayModal(false);
@@ -30,7 +44,11 @@ const Home: NextPage = () => {
                 />
                 <HeroSection />
                 <AboutSection />
-                <ContactSection openModal={onModalOpen} />
+                <ContactSection
+                    whatsPhone={number}
+                    formspreeKey={formspreeKey}
+                    openModal={onModalOpen}
+                />
                 <FooterSection />
             </section>
         </div>

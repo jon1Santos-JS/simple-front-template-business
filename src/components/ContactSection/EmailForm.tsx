@@ -4,12 +4,18 @@ import EmailIcon from '../../../public/images/email-icon-svg.svg';
 import Image from 'next/image';
 import useInputCheck from '../../hooks/useInputCheck';
 
+export type formspreeKey = string | undefined;
+
 interface EmailFormProps {
     openThanksModal: () => void;
+    formspreeKey: formspreeKey;
 }
 
-export default function EmailForm({ openThanksModal }: EmailFormProps) {
-    const [state, handleSubmit] = useForm('mnqrynyo');
+export default function EmailForm({
+    openThanksModal,
+    formspreeKey,
+}: EmailFormProps) {
+    const [state, handleSubmit] = useForm(formspreeKey as string);
     const [focus, setFocus] = useState(false);
     const [turnOffState, setTurnOffState] = useState('');
     const [emailValue, setEmailvalue] = useState('');

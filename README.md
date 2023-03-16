@@ -16,15 +16,18 @@ yarn dev</pre>
 
 * Next.js
 * Sass
+* Typescript
+* React
 
 ### Prerequisites
 
-* Set up formspree key to receive emails:
+* Set up FORMSPREE_KEY key on '.env.local':
 - sign up in formspree (https://formspree.io/)
-- go to 'integrations' -> 'react' -> copy 'useform value'
-- just change 'useform default value' to your own (const [state, handleSubmit] = useForm('your key'))
+- go to 'integrations' -> 'react' -> copy 'useform value' and paste it in file
+
+* Set up 'whatsapp' PHONE_NUMBER that you prefer
 
 ### Api Reference
 
-* Formspree - to send/received emails from clientes (https://formspree.io/)
+* Formspree - to send/received emails from clients (https://formspree.io/)
 

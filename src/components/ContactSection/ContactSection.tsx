@@ -1,11 +1,17 @@
-import EmailForm from './EmailForm';
-import WhatsappForm from './WhatsappForm';
+import EmailForm, { formspreeKey } from './EmailForm';
+import WhatsappForm, { whatsappPhone } from './WhatsappForm';
 
 interface ContactSectionProps {
     openModal: () => void;
+    whatsPhone: whatsappPhone;
+    formspreeKey: formspreeKey;
 }
 
-export default function ContactSection({ openModal }: ContactSectionProps) {
+export default function ContactSection({
+    openModal,
+    whatsPhone,
+    formspreeKey,
+}: ContactSectionProps) {
     return (
         <>
             <div
@@ -17,8 +23,11 @@ export default function ContactSection({ openModal }: ContactSectionProps) {
                     <h2 className="c-title l-font-primary">
                         Do you need to open a business?
                     </h2>
-                    <WhatsappForm />
-                    <EmailForm openThanksModal={openModal} />
+                    <WhatsappForm number={whatsPhone} />
+                    <EmailForm
+                        formspreeKey={formspreeKey}
+                        openThanksModal={openModal}
+                    />
                 </div>
             </section>
         </>
