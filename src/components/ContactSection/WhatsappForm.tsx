@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import WhatsappIcon from '../../public/images/whatsapp-icon-svg.svg';
+import WhatsappIcon from '../../../public/images/whatsapp-icon-svg.svg';
 import Image from 'next/image';
 import useInputCheck from '../../hooks/useInputCheck';
 

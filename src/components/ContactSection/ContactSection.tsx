@@ -15,7 +15,7 @@ export default function ContactSection({ openModal }: ContactSectionProps) {
             <section className="o-contact-section l-bg-primary-white">
                 <div className="c-contact-container">
                     <h2 className="c-title l-font-primary">
-                        Precisando abrir empresa ou migrar de contabilidade?
+                        Do you need to open a business?
                     </h2>
                     <WhatsappForm />
                     <EmailForm openThanksModal={openModal} />

@@ -1,6 +1,6 @@
 import { useForm, ValidationError } from '@formspree/react';
 import { FormEvent, useEffect, useState } from 'react';
-import EmailIcon from '../../public/images/email-icon-svg.svg';
+import EmailIcon from '../../../public/images/email-icon-svg.svg';
 import Image from 'next/image';
 import useInputCheck from '../../hooks/useInputCheck';
 

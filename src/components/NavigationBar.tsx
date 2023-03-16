@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ScontLogo from '../public/images/logo-svg.svg';
+import ScontLogo from '../../public/images/logo-svg.svg';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -38,7 +38,7 @@ export default function NavigationBar({
                     className="l-primary-navigation-button"
                     href={checkUsersPage('#contact')}
                 >
-                    Contato
+                    Contact
                 </Link>
                 <Link
                     className="l-primary-navigation-button"
