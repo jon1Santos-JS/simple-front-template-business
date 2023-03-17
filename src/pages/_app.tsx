@@ -9,7 +9,6 @@ import { useRouter } from 'next/router';
 const montserrat = Montserrat();
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-    const router = useRouter();
     const displayTopNavigationBar =
         Component.name !== 'Page404' ? (
             <NavigationBar navigationClassName="c-navigation c-top-navigation l-bg-primary-white l-light-shadow" />
@@ -18,12 +17,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         Component.name !== 'Page404' ? (
             <NavigationBar navigationClassName="c-navigation c-bottom-navigation l-bg-primary-white" />
         ) : null;
-
-    useEffect(() => {
-        window.scrollTo(0, -10);
-        if (window.location.hash.includes('#')) router.push('/');
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
 
     return (
         <main className={montserrat.className}>
