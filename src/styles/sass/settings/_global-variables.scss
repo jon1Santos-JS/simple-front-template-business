@@ -15,6 +15,7 @@
     --app-base-font-size: clamp(0.5vw + var(--app-base-measure), var(--app-base-measure) * 1.6, 1.5vw + var(--app-base-measure));
     --navigation-measure-difference: calc(var(--app-base-measure) * 7);
     --app-width-responsive: clamp(5vw + var(--app-base-measure) * 20, var(--app-base-measure) * 70, 45vw);
+    --section-base: calc(var(--app-base-measure) * 85.5);
     --section-base-border-mobile: calc(var(--app-base-measure) * 5);
     --section-base-border-desktop: calc(var(--app-base-measure) * 14);
 

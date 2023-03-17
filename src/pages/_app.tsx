@@ -3,8 +3,6 @@ import '../styles/sass/index.scss';
 import { Montserrat } from '@next/font/google';
 import NavigationBar from '../components/NavigationBar';
 import NextNProgress from 'nextjs-progressbar';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 
 const montserrat = Montserrat();
 

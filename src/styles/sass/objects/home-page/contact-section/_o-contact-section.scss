@@ -3,7 +3,7 @@
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 130vh;
+    height: var(--section-base);
 
     @media screen and (min-height: 800px){
         height: 90vh;

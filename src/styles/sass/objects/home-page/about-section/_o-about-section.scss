@@ -1,5 +1,5 @@
 .o-about-section{
-    height: 110vh;
+    height: var(--section-base);
 
     @media screen and (min-height: 800px){
         height: 80vh;

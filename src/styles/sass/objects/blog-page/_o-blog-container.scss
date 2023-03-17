@@ -1,6 +1,6 @@
 .o-blog-container{
     display: flex;
-    height: 100vh;
+    height: var(--section-base);
     margin-top: var(--navigation-measure-difference);
     padding: calc(var(--app-base-measure) * 5);
     background-color: var(--primary-white-color);

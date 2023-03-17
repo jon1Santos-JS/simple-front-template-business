@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import ScontLogo from '../../public/images/logo-svg.svg';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 interface NavigationProps {
@@ -24,14 +22,11 @@ export default function NavigationBar({
 
     return (
         <div className={navigationClassName}>
-            <Link href="/">
-                <Image
-                    src={ScontLogo}
-                    width={42}
-                    height={42}
-                    alt="scont logo"
-                    className="c-navigation-logo"
-                />
+            <Link
+                className="c-navigation-logo"
+                href={checkUsersPage('#contact')}
+            >
+                LOGO
             </Link>
             <div className="c-navigation-routes">
                 <Link

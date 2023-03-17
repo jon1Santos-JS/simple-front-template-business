@@ -21,7 +21,7 @@ export default function ContactSection({
             <section className="o-contact-section l-bg-primary-white">
                 <div className="c-contact-container">
                     <h2 className="c-title l-font-primary">
-                        Do you need to open a business?
+                        Ipsum has been the industrys standard dummy
                     </h2>
                     <WhatsappForm number={whatsPhone} />
                     <EmailForm
