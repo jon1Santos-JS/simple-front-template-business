@@ -1,23 +1,18 @@
-.o-404-page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-
-    & .o-sentence{
+.o-404{
         display: flex;
         justify-content: center;
         align-items: center;
         z-index: var(--component-index);
 
-        & .o-404{
+        & .title{
             font-size: calc(var(--app-base-font-size) * 4);
         }
-        & .o-not-found{
+
+        & .paragraph{
             font-size: calc(var(--app-base-font-size) * 1.3);
             border-left: solid 5px;
             padding: 20px 20px;
             margin-left: 20px;
         }
     }
-}
+

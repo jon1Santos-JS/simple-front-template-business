@@ -22,10 +22,7 @@ export default function NavigationBar({
 
     return (
         <div className={navigationClassName}>
-            <Link
-                className="c-navigation-logo"
-                href={checkUsersPage('#contact')}
-            >
+            <Link className="c-navigation-logo" href={checkUsersPage('/')}>
                 LOGO
             </Link>
             <div className="c-navigation-routes">
