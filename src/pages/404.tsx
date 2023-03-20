@@ -1,4 +1,4 @@
-export default function Page404() {
+export default function PageError404() {
     return (
         <div className="o-error-page l-bg-error">
             <div className="o-404 l-font-primary-white">

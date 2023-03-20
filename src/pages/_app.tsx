@@ -7,14 +7,12 @@ import NextNProgress from 'nextjs-progressbar';
 const montserrat = Montserrat();
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-    const displayTopNavigationBar =
-        Component.name !== 'Page404' ? (
-            <NavigationBar navigationClassName="c-navigation c-top-navigation l-bg-primary-white l-light-shadow" />
-        ) : null;
-    const displayBottomNavigationBar =
-        Component.name !== 'Page404' ? (
-            <NavigationBar navigationClassName="c-navigation c-bottom-navigation l-bg-primary-white" />
-        ) : null;
+    const displayTopNavigationBar = !Component.name.includes('PageError') ? (
+        <NavigationBar navigationClassName="c-navigation c-top-navigation l-bg-primary-white l-light-shadow" />
+    ) : null;
+    const displayBottomNavigationBar = !Component.name.includes('PageError') ? (
+        <NavigationBar navigationClassName="c-navigation c-bottom-navigation l-bg-primary-white" />
+    ) : null;
 
     return (
         <main className={montserrat.className}>

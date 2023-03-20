@@ -1,18 +1,24 @@
-.o-505{
+.o-500{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: var(--component-index);
+    padding: 40px;
 
     & .title{
         font-size: calc(var(--app-base-font-size) * 4);
+        display: flex;
+        text-align: center;
     }
 
     & .paragraph{
         font-size: calc(var(--app-base-font-size) * 1.3);
-        border-left: solid 5px;
         padding: 20px 20px;
         margin-left: 20px;
+        width: 60%;
+        text-align: center;
+        line-height: 30px;
     }
 }
 
