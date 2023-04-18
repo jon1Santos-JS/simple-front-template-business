@@ -14,15 +14,6 @@ yarn dev</pre>
 
 #
 
-### Built With
-
-* Next.js
-* Sass
-* Typescript
-* React
-
-#
-
 ### Prerequisites
 
 * Set up **FORMSPREE_KEY** key in your 'env.local' file:
@@ -30,6 +21,15 @@ yarn dev</pre>
 2. go to 'integrations' -> 'react' -> copy 'useform value' and paste it in file
 
 * Set up 'whatsapp' **PHONE_NUMBER** you prefer in your 'env.local' file
+
+#
+
+### Built With
+
+* Next.js
+* Sass
+* Typescript
+* React
 
 #
 
