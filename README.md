@@ -1,5 +1,7 @@
 # simple-website-template
 
+<hr>
+
 [<img target=_blank height="50px" src="https://media0.giphy.com/media/5ABGt7KDXJ62zg7oI0/giphy.gif?cid=790b761123aba84c737efe59273d3d75b3dbaef458bf13a4&rid=giphy.gif&ct=s" />](https://simple-front-template-business.vercel.app/)
 
 ## Installing / Getting started
@@ -10,7 +12,7 @@
 yarn dev</pre>
 * Open http://localhost:3000 with your browser to see the result. file.
 
-## Developing
+#
 
 ### Built With
 
@@ -18,6 +20,8 @@ yarn dev</pre>
 * Sass
 * Typescript
 * React
+
+#
 
 ### Prerequisites
 
@@ -27,7 +31,14 @@ yarn dev</pre>
 
 * Set up 'whatsapp' **PHONE_NUMBER** you prefer in your 'env.local' file
 
+#
+
 ### Style guide
+
+#### Typescript
+
+* SOLID
+* CLEAN CODE
 
 #### Sass
 
@@ -35,12 +46,24 @@ yarn dev</pre>
 * OOCSS
 * NAMESPACES
 
-#### Typescript
-
-* SOLID
-* CLEAN CODE
+#
 
 ### Api Reference
 
 * Formspree - to send/received emails from clients (https://formspree.io/)
 
+#
+
+### Skilled
+
+#### Typescript
+
+* Error pages: It has both '404 and 500 error pages'.
+* To send emails: Integration with 'formspree' api, you can receive email through the app.
+* Whatsapp Query: Integration with 'whatsapp access query address', people can send messages to your 'whatsapp business account'.
+
+#### Sass
+
+* Itcss: To ensure css priority cascade.
+* Global Variables: To handle the layout page faster.
+* Bottom Navigation bar: For mobile navigation easier.
