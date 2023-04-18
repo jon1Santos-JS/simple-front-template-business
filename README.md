@@ -27,6 +27,19 @@ yarn dev</pre>
 
 * Set up 'whatsapp' **PHONE_NUMBER** you prefer in your 'env.local' file
 
+### Style guide
+
+#### Sass
+
+* SMACSS
+* OOCSS
+* NAMESPACES
+
+#### Typescript
+
+* SOLID
+* CLEAN CODE
+
 ### Api Reference
 
 * Formspree - to send/received emails from clients (https://formspree.io/)
