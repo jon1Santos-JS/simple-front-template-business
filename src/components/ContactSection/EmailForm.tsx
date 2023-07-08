@@ -87,7 +87,7 @@ export default function EmailForm({
                     turnOffState ? turnOffState : textValue,
                 )}`}
                 name="message"
-                placeholder="Mensagem"
+                placeholder="Message"
                 value={textValue}
                 maxLength={255}
                 onChange={(e) =>
