@@ -30,10 +30,10 @@ const Home: NextPage<HomeProps> = ({ number, formspreeKey }) => {
     return (
         <div>
             <Head>
-                <title>Scont Contabilidade</title>
+                <title>Company</title>
                 <meta
-                    name="Scont Contabilidade homepage"
-                    content="Entrar em contato com a scont, e conhecer um pouco mais sobre a empresa"
+                    name="Company homepage"
+                    content="To contact, and first impressions"
                 />
                 <link rel="icon" href="/favicon-scont.ico" />
             </Head>
