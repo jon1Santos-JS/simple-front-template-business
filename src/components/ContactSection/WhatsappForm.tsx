@@ -75,7 +75,7 @@ export default function WhatsappForm(props: whatsappFormProps) {
                 type="submit"
                 onClick={() => setFirstCheck(false)}
             >
-                Enviar
+                Submit
             </button>
         </form>
     );
