@@ -54,7 +54,7 @@ export default function WhatsappForm(props: whatsappFormProps) {
                 onChange={(e) =>
                     onCheckInputLength(e.target.value, 40, setUserName)
                 }
-                placeholder="Nome"
+                placeholder="Name"
                 maxLength={40}
             />
             <textarea
@@ -67,7 +67,7 @@ export default function WhatsappForm(props: whatsappFormProps) {
                     onCheckInputLength(e.target.value, 255, setTextMessage)
                 }
                 name="message"
-                placeholder="Mensagem"
+                placeholder="Message"
                 maxLength={255}
             />
             <button
