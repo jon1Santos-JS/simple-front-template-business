@@ -111,7 +111,7 @@ export default function EmailForm({
                 onBlur={() => setFocus(false)}
                 onClick={() => setFirstCheck(false)}
             >
-                Enviar
+                Submit
             </button>
         </form>
     );
