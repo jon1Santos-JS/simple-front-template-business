@@ -18,10 +18,10 @@ const Blog: NextPage = () => {
     return (
         <div>
             <Head>
-                <title>Scont Blog</title>
+                <title>Blog page</title>
                 <meta
-                    name="Scont Contabilidade Blog Page"
-                    content="Entender um pouco mais sobre processos relacionados a contabilidade e administração de empresas"
+                    name="Company's blog page"
+                    content="To share information and understanding some topics"
                 />
                 <link rel="icon" href="/favicon-scont.ico" />
             </Head>
