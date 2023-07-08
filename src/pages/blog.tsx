@@ -20,7 +20,7 @@ const Blog: NextPage = () => {
                     name="Company's blog page"
                     content="To share information and understanding some topics"
                 />
-                <link rel="icon" href="#"></link>
+                <link rel="icon" href="data:,"></link>
             </Head>
             <section className="o-blog-page l-bg-primary-white">
                 <section className="o-blog-container">
