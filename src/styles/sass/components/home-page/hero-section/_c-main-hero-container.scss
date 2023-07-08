@@ -16,17 +16,18 @@
         transform: scale(0.5);
     }
 
+
     & .c-container-tittle{
         font-size: calc(var(--app-base-font-size) * 2.5);
         z-index: 1;
-        width: 100%;
-        white-space: nowrap;
-        margin-left: var(--margin-left-adjust-mobile);
-        animation: hero-section-text-intro 0.7s ease;
+    }
+    width: 100%;
+    white-space: nowrap;
+    margin-left: var(--margin-left-adjust-mobile);
+    animation: hero-section-text-intro 0.7s ease;
 
-        @media screen and (min-width: 1024px){
-            margin-left: var(--margin-left-adjust-desktop);
-        }
+    @media screen and (min-width: 1024px){
+        margin-left: var(--margin-left-adjust-desktop);
     }
 
     & .c-content{

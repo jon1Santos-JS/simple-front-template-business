@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface NavigationProps {
     navigationClassName: string;
@@ -10,31 +10,28 @@ export default function NavigationBar({
 }: NavigationProps) {
     const [isUserOnMainPage, setisUserOnMainPage] = useState('');
 
-    useEffect(() => {
-        setisUserOnMainPage(window.location.pathname);
-        if (isUserOnMainPage !== '/')
+    function checkUersPage() {
+        if (window.location.pathname !== window.location.origin)
             setisUserOnMainPage(window.location.origin);
-    }, [isUserOnMainPage]);
-
-    function checkUsersPage(path: string) {
-        return isUserOnMainPage === '/' ? path : isUserOnMainPage + '/' + path;
     }
 
     return (
         <div className={navigationClassName}>
-            <Link className="c-navigation-logo" href={checkUsersPage('/')}>
+            <Link className="c-navigation-logo" href={'/'}>
                 LOGO
             </Link>
             <div className="c-navigation-routes">
                 <Link
                     className="l-primary-navigation-button"
-                    href={checkUsersPage('#contact')}
+                    href={isUserOnMainPage + '/#contact'}
+                    onClick={() => checkUersPage()}
                 >
                     Contact
                 </Link>
                 <Link
                     className="l-primary-navigation-button"
-                    href={checkUsersPage('#about')}
+                    href={isUserOnMainPage + '/#about'}
+                    onClick={() => checkUersPage()}
                 >
                     About
                 </Link>

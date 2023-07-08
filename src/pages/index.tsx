@@ -35,6 +35,7 @@ const Home: NextPage<HomeProps> = ({ number, formspreeKey }) => {
                     name="Company homepage"
                     content="To contact, and first impressions"
                 />
+                <link rel="icon" href="data:,"></link>
             </Head>
             <section className="o-home-page">
                 <ThanksEmailModal
